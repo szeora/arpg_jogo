@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=8 format=3 uid="uid://exxoetrvm0ro"]
+
+[ext_resource type="Script" uid="uid://dym6w1q85ylhd" path="res://Items/item_effects/item_effect.gd" id="1_lfb0y"]
+[ext_resource type="AudioStream" uid="uid://b36djivsj0jk5" path="res://Items/item_effects/hp-up.wav" id="2_68m2p"]
+[ext_resource type="Script" uid="uid://bu0wwt0xh0fpx" path="res://Items/scripts/item_data.gd" id="2_kdugl"]
+[ext_resource type="Script" uid="uid://lta85tilu2m5" path="res://Items/item_effects/item_effect_heal.gd" id="3_ak64j"]
+[ext_resource type="Texture2D" uid="uid://cfswo0nmx4w1t" path="res://Items/sprites/items.png" id="5_p1mpk"]
+
+[sub_resource type="Resource" id="Resource_ksy4s"]
+script = ExtResource("3_ak64j")
+audio = ExtResource("2_68m2p")
+metadata/_custom_type_script = "uid://lta85tilu2m5"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qo2qw"]
+atlas = ExtResource("5_p1mpk")
+region = Rect2(192, 0, 32, 32)
+
+[resource]
+script = ExtResource("2_kdugl")
+name = "Fruit"
+description = "A delicious fruit."
+texture = SubResource("AtlasTexture_qo2qw")
+effects = Array[ExtResource("1_lfb0y")]([SubResource("Resource_ksy4s")])
+metadata/_custom_type_script = "uid://bu0wwt0xh0fpx"

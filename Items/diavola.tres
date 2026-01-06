@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=8 format=3 uid="uid://enksw2d8fyie"]
+
+[ext_resource type="Script" uid="uid://bu0wwt0xh0fpx" path="res://Items/scripts/item_data.gd" id="1_ases2"]
+[ext_resource type="Script" uid="uid://dym6w1q85ylhd" path="res://Items/item_effects/item_effect.gd" id="1_mfjxl"]
+[ext_resource type="Script" uid="uid://lta85tilu2m5" path="res://Items/item_effects/item_effect_heal.gd" id="2_i37we"]
+[ext_resource type="Texture2D" uid="uid://cfswo0nmx4w1t" path="res://Items/sprites/items.png" id="2_xxo0d"]
+[ext_resource type="AudioStream" uid="uid://b36djivsj0jk5" path="res://Items/item_effects/hp-up.wav" id="3_i37we"]
+
+[sub_resource type="Resource" id="Resource_h1yjv"]
+script = ExtResource("2_i37we")
+heal_amount = 2
+audio = ExtResource("3_i37we")
+metadata/_custom_type_script = "uid://lta85tilu2m5"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ig3c4"]
+atlas = ExtResource("2_xxo0d")
+region = Rect2(32, 0, 32, 32)
+
+[resource]
+script = ExtResource("1_ases2")
+name = "Diavola"
+description = "Use this to regain a Heart. A delicacy in the material plane, it is a bright red bell pepper that is hot to the touch. Infused with the flames of Hell, it invigorates and attracts demonspawn."
+texture = SubResource("AtlasTexture_ig3c4")
+effects = Array[ExtResource("1_mfjxl")]([SubResource("Resource_h1yjv")])
+metadata/_custom_type_script = "uid://bu0wwt0xh0fpx"
